@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83454AD31CA918CA0031648C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83454AD21CA918CA0031648C /* AppDelegate.swift */; };
+		83454ADB1CA918CA0031648C /* Elina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83454AD91CA918CA0031648C /* Elina.xcdatamodeld */; };
+		83454ADD1CA918CA0031648C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83454ADC1CA918CA0031648C /* Assets.xcassets */; };
+		83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */; };
+		83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83454AE91CA9192D0031648C /* HomeViewController.swift */; };
+		83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83454AEA1CA9192D0031648C /* HomeViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83454ACF1CA918CA0031648C /* Elina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elina.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83454AD21CA918CA0031648C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83454ADA1CA918CA0031648C /* Elina.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Elina.xcdatamodel; sourceTree = "<group>"; };
+		83454ADC1CA918CA0031648C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83454ADF1CA918CA0031648C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83454AE11CA918CA0031648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83454AE91CA9192D0031648C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		83454AEA1CA9192D0031648C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83454ACC1CA918CA0031648C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83454AC61CA918CA0031648C = {
+			isa = PBXGroup;
+			children = (
+				83454AD11CA918CA0031648C /* Elina */,
+				83454AD01CA918CA0031648C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83454AD01CA918CA0031648C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83454ACF1CA918CA0031648C /* Elina.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83454AD11CA918CA0031648C /* Elina */ = {
+			isa = PBXGroup;
+			children = (
+				83454AD21CA918CA0031648C /* AppDelegate.swift */,
+				83454AF01CA91B0B0031648C /* Model */,
+				83454AEF1CA91B010031648C /* Helper Classes */,
+				83454AEE1CA91AF60031648C /* Managers */,
+				83454AED1CA91AEF0031648C /* Views */,
+				83454AE71CA919030031648C /* ViewControllers */,
+				83454ADC1CA918CA0031648C /* Assets.xcassets */,
+				83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */,
+				83454AE11CA918CA0031648C /* Info.plist */,
+				83454AD91CA918CA0031648C /* Elina.xcdatamodeld */,
+			);
+			path = Elina;
+			sourceTree = "<group>";
+		};
+		83454AE71CA919030031648C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83454AE81CA919120031648C /* HomeViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		83454AE81CA919120031648C /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83454AE91CA9192D0031648C /* HomeViewController.swift */,
+				83454AEA1CA9192D0031648C /* HomeViewController.xib */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		83454AED1CA91AEF0031648C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		83454AEE1CA91AF60031648C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		83454AEF1CA91B010031648C /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		83454AF01CA91B0B0031648C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83454ACE1CA918CA0031648C /* Elina */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83454AE41CA918CA0031648C /* Build configuration list for PBXNativeTarget "Elina" */;
+			buildPhases = (
+				83454ACB1CA918CA0031648C /* Sources */,
+				83454ACC1CA918CA0031648C /* Frameworks */,
+				83454ACD1CA918CA0031648C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Elina;
+			productName = Elina;
+			productReference = 83454ACF1CA918CA0031648C /* Elina.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83454AC71CA918CA0031648C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Dea;
+				TargetAttributes = {
+					83454ACE1CA918CA0031648C = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 83454ACA1CA918CA0031648C /* Build configuration list for PBXProject "Elina" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83454AC61CA918CA0031648C;
+			productRefGroup = 83454AD01CA918CA0031648C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83454ACE1CA918CA0031648C /* Elina */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83454ACD1CA918CA0031648C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */,
+				83454ADD1CA918CA0031648C /* Assets.xcassets in Resources */,
+				83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83454ACB1CA918CA0031648C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83454AD31CA918CA0031648C /* AppDelegate.swift in Sources */,
+				83454ADB1CA918CA0031648C /* Elina.xcdatamodeld in Sources */,
+				83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83454ADF1CA918CA0031648C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83454AE21CA918CA0031648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83454AE31CA918CA0031648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83454AE51CA918CA0031648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Elina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digimark.Elina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83454AE61CA918CA0031648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Elina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = digimark.Elina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83454ACA1CA918CA0031648C /* Build configuration list for PBXProject "Elina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83454AE21CA918CA0031648C /* Debug */,
+				83454AE31CA918CA0031648C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83454AE41CA918CA0031648C /* Build configuration list for PBXNativeTarget "Elina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83454AE51CA918CA0031648C /* Debug */,
+				83454AE61CA918CA0031648C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		83454AD91CA918CA0031648C /* Elina.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83454ADA1CA918CA0031648C /* Elina.xcdatamodel */,
+			);
+			currentVersion = 83454ADA1CA918CA0031648C /* Elina.xcdatamodel */;
+			path = Elina.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 83454AC71CA918CA0031648C /* Project object */;
+}
