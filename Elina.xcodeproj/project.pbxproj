@@ -13,6 +13,7 @@
 		83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */; };
 		83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83454AE91CA9192D0031648C /* HomeViewController.swift */; };
 		83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83454AEA1CA9192D0031648C /* HomeViewController.xib */; };
+		C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		83454AE11CA918CA0031648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83454AE91CA9192D0031648C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83454AEA1CA9192D0031648C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kitty-kitties-9109284-500-460.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				83454AED1CA91AEF0031648C /* Views */,
 				83454AE71CA919030031648C /* ViewControllers */,
 				83454ADC1CA918CA0031648C /* Assets.xcassets */,
+				C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */,
 				83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */,
 				83454AE11CA918CA0031648C /* Info.plist */,
 				83454AD91CA918CA0031648C /* Elina.xcdatamodeld */,
@@ -175,6 +178,7 @@
 			files = (
 				83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */,
 				83454ADD1CA918CA0031648C /* Assets.xcassets in Resources */,
+				C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */,
 				83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +332,7 @@
 				83454AE61CA918CA0031648C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
