@@ -18,10 +18,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
     @IBOutlet var femaleButton: UIButton!
     @IBOutlet var birthdayButton: UIButton!
     
+    @IBOutlet var phoneTextField: UITextField!
+    
     var birthdayPickerView: UIDatePicker!
     var selectedDate: NSDate?
-    
-    var titlePlaceholder = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +39,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         
         customizeButton(maleButon)
         customizeButton(femaleButton)
-        
-        // DatePicker UI
-
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -88,10 +85,30 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         sender.selected = true
         maleButon.selected = false
     }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if string.characters.count == 0 {
+            return true
+        }
+        
+        if textField.isEqual(phoneTextField) {
+            
+            let cs = NSCharacterSet(charactersInString: "0123456789/+")
+            
+            let filtered = string.componentsSeparatedByCharactersInSet(cs).filter {  !$0.isEmpty }
+            let str = filtered.joinWithSeparator("")
+            
+            return (string != str)
+        }
+        
+        return true
+    }
 }
 
+
 //func changeStyle (textField: UITextField) {
-//    
+//
 //    // titlePlaceholder = (textField.attributedPlaceholder?.string)!
 //    
 //    textField.layer.borderWidth = 2
