@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITextFieldDelegate {
+class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewDelegate {
     
     @IBOutlet var invisibleView: UIView!
     @IBOutlet var scrollView: UIScrollView!
@@ -17,6 +17,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var birthdayButton: UIButton!
     
     var birthdayPickerView: UIDatePicker!
+    
+    var selectedDate: NSDate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         birthdayButton.layer.borderWidth = 1
         birthdayButton.layer.borderColor = UIColor.lightGrayColor().CGColor
         birthdayButton.layer.cornerRadius = 5
-    
+            
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -54,49 +56,56 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func birthdayButtonClicked(sender: UIButton) {
         
-        birthdayPickerView = UIDatePicker()
-        birthdayPickerView.datePickerMode = UIDatePickerMode.Date
-        //sender.inputView = birthdayPickerView
-        birthdayPickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+//        birthdayPickerView = UIDatePicker()
+//        birthdayPickerView.datePickerMode = UIDatePickerMode.Date
+//        //sender.inputView = birthdayPickerView
+//        birthdayPickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+//        
+//        let pickerSize : CGSize = birthdayPickerView.sizeThatFits(CGSizeZero)
+//        birthdayPickerView.frame = CGRectMake(0.0, 250, pickerSize.width, 200)
+//        birthdayPickerView.backgroundColor = UIColor.whiteColor()
+//        
+//        // MARK: - Add toolbar
+//        
+//        let toolBar: UIToolbar = UIToolbar()
+//        
+//        let doneButton = UIBarButtonItem(title: "Done", style: .Done, target: self, action: "Done_Click")
+//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+//        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("Cancel_Click"))
+//        
+//        toolBar.sizeToFit()
+//        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: true)
         
-        let pickerSize : CGSize = birthdayPickerView.sizeThatFits(CGSizeZero)
-        birthdayPickerView.frame = CGRectMake(0.0, 250, pickerSize.width, 200)
-        birthdayPickerView.backgroundColor = UIColor.whiteColor()
+        // Outside DatePicker
+//         toolBar.frame = CGRectMake(0, self.view.frame.size.height - 46, self.view.frame.size.width, 48)
+//         self.view.addSubview(toolBar)
         
-        // MARK: - Add toolbar
+        // Inside DatePicker
+//        birthdayPickerView.addSubview(toolBar)
+//        self.view.addSubview(birthdayPickerView)
         
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
+        let datePickerView = DatePickerView.init(frame: UIScreen.mainScreen().bounds, selectedDate: selectedDate)
+        datePickerView.delegate = self
+        datePickerView.show()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("Done_Click"))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("Cancel_Click"))
-        
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        
-        birthdayPickerView.addSubview(toolBar)
-        
-        self.view.addSubview(birthdayPickerView)
     }
     
-    func handleDatePicker(sender: UIDatePicker) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        dateFormatter.timeStyle = .NoStyle
-        //birthdayButton.setTitle = dateFormatter.stringFromDate(sender.date)
-        birthdayButton.setTitle(dateFormatter.stringFromDate(sender.date), forState: .Normal)
-
-    }
     
-    func Done_Click()
-    {
-        print("Hello")
-        birthdayPickerView.hidden = true
-    }
+//    func handleDatePicker(sender: UIDatePicker) {
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateStyle = .MediumStyle
+//        dateFormatter.timeStyle = .NoStyle
+//        //birthdayButton.setTitle = dateFormatter.stringFromDate(sender.date)
+//        birthdayButton.setTitle(dateFormatter.stringFromDate(sender.date), forState: .Normal)
+//
+//    }
     
-    func Cancel_Click()
-    {
-        print("Hello")
-        birthdayPickerView.backgroundColor = UIColor.yellowColor()
+    // MARK: - DatePickerView Delegate
+    
+    func datePickerViewDidPickDate(date: NSDate, sender: DatePickerView) {
+        selectedDate = date
+       // birthdayButton.setTitle("Date is set", forState: .Normal)
+        birthdayButton.setTitle(selectedDate?.dateToString(date), forState: .Normal)
+        sender.hide()
     }
 }

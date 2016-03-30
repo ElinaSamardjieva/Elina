@@ -13,7 +13,10 @@
 		83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */; };
 		83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83454AE91CA9192D0031648C /* HomeViewController.swift */; };
 		83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83454AEA1CA9192D0031648C /* HomeViewController.xib */; };
+		83FA14651CAAB85D0028FFE6 /* DateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA14641CAAB85D0028FFE6 /* DateMethods.swift */; };
 		C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */; };
+		C351BF7C1CAA86A600332B18 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351BF7B1CAA86A600332B18 /* DatePickerView.swift */; };
+		C351BF7E1CAA891B00332B18 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C351BF7D1CAA891B00332B18 /* DatePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +28,10 @@
 		83454AE11CA918CA0031648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83454AE91CA9192D0031648C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83454AEA1CA9192D0031648C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		83FA14641CAAB85D0028FFE6 /* DateMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateMethods.swift; sourceTree = "<group>"; };
 		C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kitty-kitties-9109284-500-460.jpg"; sourceTree = "<group>"; };
+		C351BF7B1CAA86A600332B18 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		C351BF7D1CAA891B00332B18 /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 		83454AED1CA91AEF0031648C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C351BF7B1CAA86A600332B18 /* DatePickerView.swift */,
+				C351BF7D1CAA891B00332B18 /* DatePickerView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 		83454AEF1CA91B010031648C /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				83FA14641CAAB85D0028FFE6 /* DateMethods.swift */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -179,6 +188,7 @@
 				83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */,
 				83454ADD1CA918CA0031648C /* Assets.xcassets in Resources */,
 				C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */,
+				C351BF7E1CAA891B00332B18 /* DatePickerView.xib in Resources */,
 				83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,8 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83FA14651CAAB85D0028FFE6 /* DateMethods.swift in Sources */,
 				83454AD31CA918CA0031648C /* AppDelegate.swift in Sources */,
 				83454ADB1CA918CA0031648C /* Elina.xcdatamodeld in Sources */,
+				C351BF7C1CAA86A600332B18 /* DatePickerView.swift in Sources */,
 				83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

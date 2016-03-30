@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerView" customModule="Elina" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="s1P-tc-fKz" id="NAs-sf-myN"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="P4b-SF-2s5"/>
+                <outlet property="customDatePicker" destination="b2t-kw-phz" id="qrK-2P-lJY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1P-tc-fKz">
+                    <rect key="frame" x="0.0" y="340" width="600" height="260"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="b2t-kw-phz">
+                            <rect key="frame" x="0.0" y="44" width="600" height="216"/>
+                            <date key="date" timeIntervalSinceReferenceDate="480949760.13101">
+                                <!--2016-03-29 13:09:20 +0000-->
+                            </date>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptb-0h-cVz">
+                            <rect key="frame" x="8" y="0.0" width="70" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="57D-Ki-5Hu"/>
+                                <constraint firstAttribute="height" constant="44" id="xoY-WD-ESF"/>
+                            </constraints>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="uBV-3V-jbz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKS-mP-P8b">
+                            <rect key="frame" x="528" y="0.0" width="64" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="MjR-rf-ycL"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="PGs-rs-3FO"/>
+                                <constraint firstAttribute="height" constant="44" id="TbB-IQ-tgF"/>
+                            </constraints>
+                            <state key="normal" title="Done"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="PGs-rs-3FO"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="TJx-kd-ZzQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ptb-0h-cVz" firstAttribute="leading" secondItem="s1P-tc-fKz" secondAttribute="leading" constant="8" id="7M9-e0-GWx"/>
+                        <constraint firstAttribute="trailing" secondItem="b2t-kw-phz" secondAttribute="trailing" id="Kgc-9E-dIx"/>
+                        <constraint firstAttribute="height" constant="260" id="Pat-lj-MXL"/>
+                        <constraint firstAttribute="trailing" secondItem="GKS-mP-P8b" secondAttribute="trailing" constant="8" id="dmq-N5-j6m"/>
+                        <constraint firstItem="b2t-kw-phz" firstAttribute="leading" secondItem="s1P-tc-fKz" secondAttribute="leading" id="hGq-0D-iut"/>
+                        <constraint firstAttribute="height" constant="200" id="rgc-t2-25k">
+                            <variation key="heightClass=regular-widthClass=compact" constant="260"/>
+                        </constraint>
+                        <constraint firstItem="GKS-mP-P8b" firstAttribute="top" secondItem="s1P-tc-fKz" secondAttribute="top" id="wUg-ZL-Qcu"/>
+                        <constraint firstItem="ptb-0h-cVz" firstAttribute="top" secondItem="s1P-tc-fKz" secondAttribute="top" id="yXf-Vb-xqE"/>
+                        <constraint firstAttribute="bottom" secondItem="b2t-kw-phz" secondAttribute="bottom" id="ylK-Cn-p7C"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="rgc-t2-25k"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="rgc-t2-25k"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="s1P-tc-fKz" secondAttribute="bottom" id="2ng-dc-Q8n"/>
+                <constraint firstAttribute="trailing" secondItem="s1P-tc-fKz" secondAttribute="trailing" id="SSz-WF-uD5"/>
+                <constraint firstItem="s1P-tc-fKz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z73-zP-gX6"/>
+            </constraints>
+            <point key="canvasLocation" x="309" y="406"/>
+        </view>
+    </objects>
+</document>
