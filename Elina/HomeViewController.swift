@@ -13,26 +13,35 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
     @IBOutlet var invisibleView: UIView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var profileImageView: UIImageView!
-    @IBOutlet var emailTextField: UITextField!
+    
+    @IBOutlet var maleButon: UIButton!
+    @IBOutlet var femaleButton: UIButton!
     @IBOutlet var birthdayButton: UIButton!
     
     var birthdayPickerView: UIDatePicker!
     var selectedDate: NSDate?
-
+    
+    var titlePlaceholder = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // MARK: - Scroll view color
-        scrollView.backgroundColor = UIColor(red: 0.7, green: 0.9, blue: 1.0, alpha: 1.0)
         
         // MARK: - Keyboard dismiss
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
         // MARK: - Button UI
-        birthdayButton.layer.borderWidth = 1
-        birthdayButton.layer.borderColor = UIColor.lightGrayColor().CGColor
+        birthdayButton.backgroundColor = UIColor.clearColor()
+        birthdayButton.layer.borderWidth = 2
+        birthdayButton.layer.borderColor = UIColor.whiteColor().CGColor
         birthdayButton.layer.cornerRadius = 5
+        birthdayButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
+        customizeButton(maleButon)
+        customizeButton(femaleButton)
+        
+        // DatePicker UI
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -62,4 +71,33 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         birthdayButton.setTitle(selectedDate?.dateToString(date), forState: .Normal)
         sender.hide()
     }
+    
+    func customizeButton(button: UIButton) {
+        button.setImage(UIImage(named: "check")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Selected)
+        button.setImage(UIImage(named: "uncheck")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
+        button.setImage(UIImage(named: "check")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Highlighted)
+        button.tintColor = UIColor.whiteColor()
+    }
+    
+    @IBAction func maleButtonPressed(sender: UIButton) {
+        sender.selected = true
+        femaleButton.selected = false
+    }
+    
+    @IBAction func femaleButtonPressed(sender: UIButton) {
+        sender.selected = true
+        maleButon.selected = false
+    }
 }
+
+//func changeStyle (textField: UITextField) {
+//    
+//    // titlePlaceholder = (textField.attributedPlaceholder?.string)!
+//    
+//    textField.layer.borderWidth = 2
+//    textField.layer.borderColor = UIColor.whiteColor().CGColor
+//    textField.layer.cornerRadius = 5
+//    textField.attributedPlaceholder = NSAttributedString(string: (textField.attributedPlaceholder?.string)!,
+//        attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+//}
+

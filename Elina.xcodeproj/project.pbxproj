@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		83454AD31CA918CA0031648C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83454AD21CA918CA0031648C /* AppDelegate.swift */; };
 		83454ADB1CA918CA0031648C /* Elina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83454AD91CA918CA0031648C /* Elina.xcdatamodeld */; };
-		83454ADD1CA918CA0031648C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83454ADC1CA918CA0031648C /* Assets.xcassets */; };
 		83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */; };
 		83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83454AE91CA9192D0031648C /* HomeViewController.swift */; };
 		83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83454AEA1CA9192D0031648C /* HomeViewController.xib */; };
 		83FA14651CAAB85D0028FFE6 /* DateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA14641CAAB85D0028FFE6 /* DateMethods.swift */; };
+		C333E5991CAC098900DA49D4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333E5981CAC098900DA49D4 /* CustomTextField.swift */; };
+		C333E59F1CAC1B8300DA49D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */; };
 		C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */; };
 		C351BF7C1CAA86A600332B18 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351BF7B1CAA86A600332B18 /* DatePickerView.swift */; };
 		C351BF7E1CAA891B00332B18 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C351BF7D1CAA891B00332B18 /* DatePickerView.xib */; };
@@ -23,12 +24,13 @@
 		83454ACF1CA918CA0031648C /* Elina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83454AD21CA918CA0031648C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83454ADA1CA918CA0031648C /* Elina.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Elina.xcdatamodel; sourceTree = "<group>"; };
-		83454ADC1CA918CA0031648C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83454ADF1CA918CA0031648C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83454AE11CA918CA0031648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83454AE91CA9192D0031648C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83454AEA1CA9192D0031648C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		83FA14641CAAB85D0028FFE6 /* DateMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateMethods.swift; sourceTree = "<group>"; };
+		C333E5981CAC098900DA49D4 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kitty-kitties-9109284-500-460.jpg"; sourceTree = "<group>"; };
 		C351BF7B1CAA86A600332B18 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		C351BF7D1CAA891B00332B18 /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
@@ -70,11 +72,11 @@
 				83454AEE1CA91AF60031648C /* Managers */,
 				83454AED1CA91AEF0031648C /* Views */,
 				83454AE71CA919030031648C /* ViewControllers */,
-				83454ADC1CA918CA0031648C /* Assets.xcassets */,
 				C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */,
 				83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */,
 				83454AE11CA918CA0031648C /* Info.plist */,
 				83454AD91CA918CA0031648C /* Elina.xcdatamodeld */,
+				C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */,
 			);
 			path = Elina;
 			sourceTree = "<group>";
@@ -101,6 +103,7 @@
 			children = (
 				C351BF7B1CAA86A600332B18 /* DatePickerView.swift */,
 				C351BF7D1CAA891B00332B18 /* DatePickerView.xib */,
+				C333E5981CAC098900DA49D4 /* CustomTextField.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -186,10 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */,
-				83454ADD1CA918CA0031648C /* Assets.xcassets in Resources */,
 				C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */,
 				C351BF7E1CAA891B00332B18 /* DatePickerView.xib in Resources */,
 				83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */,
+				C333E59F1CAC1B8300DA49D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +205,7 @@
 			files = (
 				83FA14651CAAB85D0028FFE6 /* DateMethods.swift in Sources */,
 				83454AD31CA918CA0031648C /* AppDelegate.swift in Sources */,
+				C333E5991CAC098900DA49D4 /* CustomTextField.swift in Sources */,
 				83454ADB1CA918CA0031648C /* Elina.xcdatamodeld in Sources */,
 				C351BF7C1CAA86A600332B18 /* DatePickerView.swift in Sources */,
 				83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */,
