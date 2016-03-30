@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerView" customModule="Elina" customModuleProvider="target">
             <connections>
+                <outlet property="blurEffectView" destination="HpK-dN-a3G" id="z0I-hS-hpu"/>
                 <outlet property="bottomView" destination="s1P-tc-fKz" id="NAs-sf-myN"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="P4b-SF-2s5"/>
                 <outlet property="customDatePicker" destination="b2t-kw-phz" id="qrK-2P-lJY"/>
@@ -17,6 +18,14 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-dN-a3G">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ccy-rS-ssK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1P-tc-fKz">
                     <rect key="frame" x="0.0" y="340" width="600" height="260"/>
                     <subviews>
@@ -84,7 +93,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="s1P-tc-fKz" secondAttribute="bottom" id="2ng-dc-Q8n"/>
+                <constraint firstItem="HpK-dN-a3G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="44O-XD-Elv"/>
+                <constraint firstAttribute="trailing" secondItem="HpK-dN-a3G" secondAttribute="trailing" id="QqM-VS-rFy"/>
                 <constraint firstAttribute="trailing" secondItem="s1P-tc-fKz" secondAttribute="trailing" id="SSz-WF-uD5"/>
+                <constraint firstItem="HpK-dN-a3G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aoE-Gy-YUk"/>
+                <constraint firstAttribute="bottom" secondItem="HpK-dN-a3G" secondAttribute="bottom" id="lLx-EA-0bq"/>
                 <constraint firstItem="s1P-tc-fKz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z73-zP-gX6"/>
             </constraints>
             <point key="canvasLocation" x="309" y="406"/>
