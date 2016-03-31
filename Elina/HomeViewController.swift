@@ -17,14 +17,23 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
     @IBOutlet var maleButon: UIButton!
     @IBOutlet var femaleButton: UIButton!
     @IBOutlet var birthdayButton: UIButton!
+    @IBOutlet var registerButton: UIButton!
     
     @IBOutlet var phoneTextField: UITextField!
+    @IBOutlet var kidsTextField: CustomTextField!
+    
+    @IBOutlet var kidsSwitch: UISwitch!
     
     var birthdayPickerView: UIDatePicker!
     var selectedDate: NSDate?
     
+    @IBOutlet var heightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // MARK: - Delegates
+        phoneTextField.delegate = self
         
         // MARK: - Keyboard dismiss
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -37,8 +46,17 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         birthdayButton.layer.cornerRadius = 5
         birthdayButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         
+        registerButton.backgroundColor = UIColor.clearColor()
+        registerButton.layer.borderWidth = 2
+        registerButton.layer.borderColor = UIColor.whiteColor().CGColor
+        registerButton.layer.cornerRadius = 5
+        registerButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
         customizeButton(maleButon)
         customizeButton(femaleButton)
+        
+        // MARK: - Constraints
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -104,17 +122,34 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         
         return true
     }
+    
+    @IBAction func kidsSwitchPressed(sender: UISwitch) {
+        
+        heightConstraint.constant = sender.on ? 30 : 0
+        
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.view.layoutIfNeeded()
+        }
+        
+    }
 }
 
 
-//func changeStyle (textField: UITextField) {
-//
-//    // titlePlaceholder = (textField.attributedPlaceholder?.string)!
-//    
-//    textField.layer.borderWidth = 2
-//    textField.layer.borderColor = UIColor.whiteColor().CGColor
-//    textField.layer.cornerRadius = 5
-//    textField.attributedPlaceholder = NSAttributedString(string: (textField.attributedPlaceholder?.string)!,
-//        attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
-//}
 
+
+
+
+
+
+
+//        let textFieldFrame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 30.0)
+//        let kidsTextField = UITextField(frame: textFieldFrame)
+//
+//        kidsTextField.backgroundColor = UIColor.greenColor()
+//        view.addSubview(kidsTextField)
+
+
+//        var bounds: CGRect
+//        bounds = kidsTextField.frame
+//        bounds.size.height = 30
+//        kidsTextField.bounds = bounds
