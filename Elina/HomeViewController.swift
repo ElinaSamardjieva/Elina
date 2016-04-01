@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewDelegate {
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, DatePickerViewDelegate {
     
     @IBOutlet var invisibleView: UIView!
     @IBOutlet var scrollView: UIScrollView!
@@ -18,8 +18,15 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
     @IBOutlet var femaleButton: UIButton!
     @IBOutlet var birthdayButton: UIButton!
     @IBOutlet var registerButton: UIButton!
+    @IBOutlet var changePictureButton: UIButton!
     
-    @IBOutlet var phoneTextField: UITextField!
+    @IBOutlet var emailTextField: CustomTextField!
+    @IBOutlet var passwordTextField: CustomTextField!
+    @IBOutlet var confirmPasswordTextField: CustomTextField!
+    @IBOutlet var firstNameTextField: CustomTextField!
+    @IBOutlet var lastNameTextField: CustomTextField!
+    @IBOutlet var addressLineTextField: CustomTextField!
+    @IBOutlet var phoneTextField: CustomTextField!
     @IBOutlet var kidsTextField: CustomTextField!
     
     @IBOutlet var kidsSwitch: UISwitch!
@@ -27,12 +34,23 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
     var birthdayPickerView: UIDatePicker!
     var selectedDate: NSDate?
     
+    var imagePicker = UIImagePickerController()
+    
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // MARK: - Delegates
+
+        imagePicker.delegate = self
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        addressLineTextField.delegate = self
         phoneTextField.delegate = self
         
         // MARK: - Keyboard dismiss
@@ -40,23 +58,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         view.addGestureRecognizer(tap)
         
         // MARK: - Button UI
-        birthdayButton.backgroundColor = UIColor.clearColor()
-        birthdayButton.layer.borderWidth = 2
-        birthdayButton.layer.borderColor = UIColor.whiteColor().CGColor
-        birthdayButton.layer.cornerRadius = 5
-        birthdayButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        
-        registerButton.backgroundColor = UIColor.clearColor()
-        registerButton.layer.borderWidth = 2
-        registerButton.layer.borderColor = UIColor.whiteColor().CGColor
-        registerButton.layer.cornerRadius = 5
-        registerButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        changeButtonStyle(birthdayButton)
+        changeButtonStyle(registerButton)
         
         customizeButton(maleButon)
         customizeButton(femaleButton)
-        
-        // MARK: - Constraints
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -66,14 +72,17 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         profileImageView.clipsToBounds = true
         profileImageView.layer.borderWidth = 2.0
         profileImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        changePictureButton.layer.cornerRadius = changePictureButton.frame.size.height / 2
     }
+    
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
     
     // MARK: - DatePicker functions
-    @IBAction func birthdayButtonClicked(sender: UIButton) {
+    @IBAction func birthdayButtonPressed(sender: UIButton) {
         
         let datePickerView = DatePickerView.init(frame: UIScreen.mainScreen().bounds, selectedDate: selectedDate)
         datePickerView.delegate = self
@@ -81,6 +90,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
     }
     
     // MARK: - DatePickerView Delegate
+    
     func datePickerViewDidPickDate(date: NSDate, sender: DatePickerView) {
         selectedDate = date
         birthdayButton.setTitle(selectedDate?.dateToString(date), forState: .Normal)
@@ -104,6 +114,76 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         maleButon.selected = false
     }
     
+    // MARK: - Number of kids
+    
+    @IBAction func kidsSwitchPressed(sender: UISwitch) {
+        
+        heightConstraint.constant = sender.on ? 30 : 0
+        
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // MARK: - Profile picture
+    
+    @IBAction func changePicturePressed(sender: UIButton) {
+        
+        // MARK: - Alert dialog
+        
+        let alert = UIAlertController(title: "Change picture", message: "Do you want to choose picture from the gallery or take new photo?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let galleryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            self.imagePicker.sourceType = .PhotoLibrary
+            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            print("Camera working")
+        }
+        alert.addAction(galleryAction)
+        alert.addAction(cameraAction)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        profileImageView.image = pickedImage
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: - Navigate through TextFields
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+
+        switch (textField) {
+            case emailTextField:
+                passwordTextField.becomeFirstResponder()
+            case passwordTextField:
+                confirmPasswordTextField.becomeFirstResponder()
+            case confirmPasswordTextField:
+                firstNameTextField.becomeFirstResponder()
+            case firstNameTextField:
+                lastNameTextField.becomeFirstResponder()
+            case lastNameTextField:
+                addressLineTextField.becomeFirstResponder()
+            case addressLineTextField:
+                phoneTextField.becomeFirstResponder()
+            case phoneTextField:
+                phoneTextField.resignFirstResponder()
+            default:
+                emailTextField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    // MARK: Use only special characters in TextField
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         if string.characters.count == 0 {
@@ -123,23 +203,17 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
         return true
     }
     
-    @IBAction func kidsSwitchPressed(sender: UISwitch) {
-        
-        heightConstraint.constant = sender.on ? 30 : 0
-        
-        UIView.animateWithDuration(0.5) { () -> Void in
-            self.view.layoutIfNeeded()
-        }
-        
+    // MARK: - ButtonUI
+    
+    func changeButtonStyle(button: UIButton) {
+        button.backgroundColor = UIColor.clearColor()
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.whiteColor().CGColor
+        button.layer.cornerRadius = 5
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
+
 }
-
-
-
-
-
-
-
 
 
 //        let textFieldFrame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 30.0)
@@ -153,3 +227,33 @@ class HomeViewController: UIViewController, UITextFieldDelegate, DatePickerViewD
 //        bounds = kidsTextField.frame
 //        bounds.size.height = 30
 //        kidsTextField.bounds = bounds
+
+//if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//    profileImageView.contentMode = .ScaleAspectFill
+//    profileImageView.image = pickedImage
+//}
+//dismissViewControllerAnimated(true, completion: nil)
+
+
+//        alert.addAction(UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default, handler: nil))
+//        alert.addAction(UIAlertAction(title: "Take a photo", style: UIAlertActionStyle.Default, handler: nil))
+
+//        if .title == "Gallery" {
+//            imagePicker.sourceType = .PhotoLibrary
+//            presentViewController(imagePicker, animated: true, completion: nil)
+//        }
+
+
+//let galleryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
+//    UIAlertAction in // = Void in
+//    self.imagePicker.sourceType = .PhotoLibrary
+//    self.presentViewController(self.imagePicker, animated: true, completion: nil)
+//}
+
+
+//        if textField == emailTextField
+//        {
+//            passwordTextField.becomeFirstResponder()
+//        } else {
+//            emailTextField.becomeFirstResponder()
+//        }
