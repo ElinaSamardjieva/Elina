@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let initialViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let initialViewController = PopUpViewController(nibName: "PopUpViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: initialViewController)
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)

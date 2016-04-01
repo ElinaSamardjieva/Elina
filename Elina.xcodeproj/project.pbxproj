@@ -13,6 +13,10 @@
 		83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83454AE91CA9192D0031648C /* HomeViewController.swift */; };
 		83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83454AEA1CA9192D0031648C /* HomeViewController.xib */; };
 		83FA14651CAAB85D0028FFE6 /* DateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA14641CAAB85D0028FFE6 /* DateMethods.swift */; };
+		C309ADC71CAE98D800686FFF /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309ADC51CAE98D800686FFF /* PopUpViewController.swift */; };
+		C309ADC81CAE98D800686FFF /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C309ADC61CAE98D800686FFF /* PopUpViewController.xib */; };
+		C309ADCC1CAE9EE100686FFF /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309ADCB1CAE9EE100686FFF /* PopUpView.swift */; };
+		C309ADCE1CAE9EF400686FFF /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C309ADCD1CAE9EF400686FFF /* PopUpView.xib */; };
 		C333E5991CAC098900DA49D4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333E5981CAC098900DA49D4 /* CustomTextField.swift */; };
 		C333E59F1CAC1B8300DA49D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */; };
 		C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */; };
@@ -29,6 +33,10 @@
 		83454AE91CA9192D0031648C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83454AEA1CA9192D0031648C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		83FA14641CAAB85D0028FFE6 /* DateMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateMethods.swift; sourceTree = "<group>"; };
+		C309ADC51CAE98D800686FFF /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		C309ADC61CAE98D800686FFF /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		C309ADCB1CAE9EE100686FFF /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		C309ADCD1CAE9EF400686FFF /* PopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
 		C333E5981CAC098900DA49D4 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kitty-kitties-9109284-500-460.jpg"; sourceTree = "<group>"; };
@@ -85,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				83454AE81CA919120031648C /* HomeViewController */,
+				C309ADC41CAE98A900686FFF /* PopUpViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -101,9 +110,8 @@
 		83454AED1CA91AEF0031648C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C351BF7B1CAA86A600332B18 /* DatePickerView.swift */,
-				C351BF7D1CAA891B00332B18 /* DatePickerView.xib */,
-				C333E5981CAC098900DA49D4 /* CustomTextField.swift */,
+				C309ADC91CAE9E9E00686FFF /* DatePickerView */,
+				C309ADCA1CAE9EB300686FFF /* PopUpView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				83FA14641CAAB85D0028FFE6 /* DateMethods.swift */,
+				C333E5981CAC098900DA49D4 /* CustomTextField.swift */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -128,6 +137,33 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C309ADC41CAE98A900686FFF /* PopUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C309ADC51CAE98D800686FFF /* PopUpViewController.swift */,
+				C309ADC61CAE98D800686FFF /* PopUpViewController.xib */,
+			);
+			name = PopUpViewController;
+			sourceTree = "<group>";
+		};
+		C309ADC91CAE9E9E00686FFF /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C351BF7B1CAA86A600332B18 /* DatePickerView.swift */,
+				C351BF7D1CAA891B00332B18 /* DatePickerView.xib */,
+			);
+			name = DatePickerView;
+			sourceTree = "<group>";
+		};
+		C309ADCA1CAE9EB300686FFF /* PopUpView */ = {
+			isa = PBXGroup;
+			children = (
+				C309ADCB1CAE9EE100686FFF /* PopUpView.swift */,
+				C309ADCD1CAE9EF400686FFF /* PopUpView.xib */,
+			);
+			name = PopUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +229,8 @@
 				C351BF7E1CAA891B00332B18 /* DatePickerView.xib in Resources */,
 				83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */,
 				C333E59F1CAC1B8300DA49D4 /* Assets.xcassets in Resources */,
+				C309ADCE1CAE9EF400686FFF /* PopUpView.xib in Resources */,
+				C309ADC81CAE98D800686FFF /* PopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83FA14651CAAB85D0028FFE6 /* DateMethods.swift in Sources */,
+				C309ADCC1CAE9EE100686FFF /* PopUpView.swift in Sources */,
 				83454AD31CA918CA0031648C /* AppDelegate.swift in Sources */,
+				C309ADC71CAE98D800686FFF /* PopUpViewController.swift in Sources */,
 				C333E5991CAC098900DA49D4 /* CustomTextField.swift in Sources */,
 				83454ADB1CA918CA0031648C /* Elina.xcdatamodeld in Sources */,
 				C351BF7C1CAA86A600332B18 /* DatePickerView.swift in Sources */,
