@@ -8,25 +8,37 @@
 
 import UIKit
 
-class PopUpViewController: UIViewController {
+class PopUpViewController: UIViewController, PopUpViewDelegate {
     
-   
+    @IBOutlet var inputTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
-    @IBAction func addOneButtonPressed(sender: UIButton) {
-        let customPopUpView = PopUpView.init(frame: UIScreen.mainScreen().bounds)
-       // customPopUpView.show()
-    }
-    
-    @IBAction func addTwoButtonsPressed(sender: UIButton) {
+    @IBAction func addOneButton(sender: UIButton) {
+        let popUpView = PopUpView.init(frame: UIScreen.mainScreen().bounds, inputText: inputTextView.text, buttonTitles: ["Dismiss"])
+        popUpView.delegate = self
         
-    }
-    
-    @IBAction func addThreeButtonsPressed(sender: UIButton) {
+        // Dismiss keyboard
+        view.endEditing(true)
         
+        popUpView.show()
     }
 
+    @IBAction func addTwoButtons(sender: UIButton) {
+        let popUpView = PopUpView.init(frame: UIScreen.mainScreen().bounds, inputText: inputTextView.text, buttonTitles: ["Dismiss", "Done"])
+        popUpView.delegate = self
+        // Dismiss keyboard
+        view.endEditing(true)
+        
+        popUpView.show()
+    }
+    
+    // MARK: - PopUpViewDelegate
+    func popUpViewDidPressedButton(sender: PopUpView, index: Int) {
+        if index == 0 {
+            sender.hide()
+        }
+    }
 }
