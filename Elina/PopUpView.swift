@@ -52,6 +52,8 @@ class PopUpView: UIView {
                 secondButton.setTitle(buttonTitles[1], forState: .Normal)
             }
         }
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "hidePopUp")
+        blurEffectView.addGestureRecognizer(tap)
     }
     
     // NB!!!
@@ -70,23 +72,35 @@ class PopUpView: UIView {
               self.blurEffectView.layer.opacity = 1
             }) { _ in
         }
-        
         UIApplication.sharedApplication().windows.first!.addSubview(self) // On top of everything, everything else is disabled
     }
     
     func hide() {
-        removeFromSuperview()
-    }
-    
-    func buttonAction(sender: UIButton) {
-        print("Hello")
+        //removeFromSuperview()
+        
+        UIView.animateWithDuration(0.5,
+            animations: {
+                self.topView.transform = CGAffineTransformMakeTranslation(0, -(CGRectGetHeight(self.topView.bounds)*3))
+                self.blurEffectView.layer.opacity = 0.3
+            }, completion: { (value: Bool) in
+                self.removeFromSuperview()
+        })
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
         if let delegate = delegate {
             delegate.popUpViewDidPressedButton(self, index: sender.tag - 1)
-            
         }
+    }
+    
+    func hidePopUp() {
+        UIView.animateWithDuration(0.5,
+            animations: {
+                self.topView.transform = CGAffineTransformMakeTranslation(0, -(CGRectGetHeight(self.topView.bounds)*3))
+                self.blurEffectView.layer.opacity = 0.3
+            }, completion: { (value: Bool) in
+                self.removeFromSuperview()
+        })
     }
 }
 

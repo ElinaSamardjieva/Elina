@@ -32,6 +32,8 @@ class PopUpViewController: UIViewController, PopUpViewDelegate {
         // Dismiss keyboard
         view.endEditing(true)
         
+
+        
         popUpView.show()
     }
     
@@ -39,6 +41,8 @@ class PopUpViewController: UIViewController, PopUpViewDelegate {
     func popUpViewDidPressedButton(sender: PopUpView, index: Int) {
         if index == 0 {
             sender.hide()
+        } else {
+            print("Hello")
         }
     }
 }

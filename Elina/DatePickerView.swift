@@ -46,7 +46,6 @@ class DatePickerView: UIView {
             self.bottomView.transform = CGAffineTransformIdentity
             self.blurEffectView.layer.opacity = 1
         }
-        
         UIApplication.sharedApplication().windows.first!.addSubview(self) // On top of everything, everything else is disabled
     }
     

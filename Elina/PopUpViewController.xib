@@ -56,9 +56,7 @@
                 <constraint firstItem="KyS-Wc-itH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="76" id="L0X-Wc-Hcm"/>
                 <constraint firstItem="jxy-PI-i5K" firstAttribute="top" secondItem="KyS-Wc-itH" secondAttribute="bottom" constant="65" id="PrP-fW-6qC"/>
                 <constraint firstItem="KyS-Wc-itH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="cTw-Et-bE7"/>
-                <constraint firstItem="jxy-PI-i5K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="d7M-Eh-59v"/>
                 <constraint firstItem="5zg-EE-P15" firstAttribute="top" secondItem="jxy-PI-i5K" secondAttribute="bottom" constant="57" id="e8e-V0-Q3Y"/>
-                <constraint firstItem="5zg-EE-P15" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="142" id="io9-b6-bCa"/>
                 <constraint firstItem="jxy-PI-i5K" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="laX-X5-95Y"/>
                 <constraint firstAttribute="trailing" secondItem="KyS-Wc-itH" secondAttribute="trailing" constant="80" id="qzg-Ac-aSe"/>
             </constraints>
@@ -73,11 +71,9 @@
                     <exclude reference="cTw-Et-bE7"/>
                     <exclude reference="qzg-Ac-aSe"/>
                     <exclude reference="PrP-fW-6qC"/>
-                    <exclude reference="d7M-Eh-59v"/>
                     <exclude reference="laX-X5-95Y"/>
                     <exclude reference="FIk-H8-ypb"/>
                     <exclude reference="e8e-V0-Q3Y"/>
-                    <exclude reference="io9-b6-bCa"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -91,11 +87,9 @@
                     <include reference="cTw-Et-bE7"/>
                     <include reference="qzg-Ac-aSe"/>
                     <include reference="PrP-fW-6qC"/>
-                    <include reference="d7M-Eh-59v"/>
                     <include reference="laX-X5-95Y"/>
                     <include reference="FIk-H8-ypb"/>
                     <include reference="e8e-V0-Q3Y"/>
-                    <include reference="io9-b6-bCa"/>
                 </mask>
             </variation>
         </view>
