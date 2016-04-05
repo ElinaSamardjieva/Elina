@@ -8,21 +8,17 @@
 
 import UIKit
 
-protocol PickPictureDelegate {
-    func pickPictureDidPressedButton(sender: PhotoCollectionViewCell)
+protocol PickPictureFromGalleryDelegate {
+    func pickPictureFromGalleryDidPressedButton(sender: PhotoCollectionViewCell)
 }
-
 
 class PhotoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var pickPhotoButton: UIButton!
-    var delegate: PickPictureDelegate?
-    
-    
+    var delegate: PickPictureFromGalleryDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func layoutSubviews() {
@@ -32,8 +28,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     @IBAction func pickPhotoButtonPressed(sender: UIButton) {
         if let delegate = delegate {
-            delegate.pickPictureDidPressedButton(self)
+            delegate.pickPictureFromGalleryDidPressedButton(self)
         }
     }
-
 }

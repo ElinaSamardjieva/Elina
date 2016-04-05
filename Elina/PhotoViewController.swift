@@ -8,12 +8,12 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, PickPictureDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, PickPictureFromGalleryDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ShowPhotoDelegate {
 
     @IBOutlet var photoCollectionView: UICollectionView!
-    var photoCell: PhotoCollectionViewCell!
     
     var imagePicker = UIImagePickerController()
+    var myControllerImageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -24,9 +24,6 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         photoCollectionView.backgroundColor = UIColor.lightGrayColor()
         
         imagePicker.delegate = self
-        
-        // photoCell!.delegate = self - // nil
-        
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,12 +35,15 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         if indexPath.row == 0 {
             let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("CellTwo", forIndexPath: indexPath) as! ResultCollectionViewCell
             cell.photoImageView.backgroundColor = UIColor.brownColor()
-
+            cell.delegate = self
+            cell.showPhotoCalled()
+            
             return cell
         } else {
             let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! PhotoCollectionViewCell
             cell.pickPhotoButton.setTitle("Add", forState: .Normal)
             cell.delegate = self
+            
             return cell
         }
     }
@@ -60,7 +60,7 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     // MARK: - Conform the PhotoCell protocol
-    func pickPictureDidPressedButton(sender: PhotoCollectionViewCell) {
+    func pickPictureFromGalleryDidPressedButton(sender: PhotoCollectionViewCell) {
         let alert = UIAlertController(title: "Change Picture", message: "Choose what you want to do", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let galleryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) {
@@ -78,5 +78,17 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         alert.addAction(cameraAction)
         
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func showPhoto(myImageView: UIImageView, sender: ResultCollectionViewCell) -> UIImageView {
+        myControllerImageView = myImageView
+        return myControllerImageView
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+
+        myControllerImageView.image = pickedImage
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
