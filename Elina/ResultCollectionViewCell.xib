@@ -7,23 +7,39 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="ResultCollectionViewCell" customModule="Elina" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellTwo" id="gTV-IL-0wX" customClass="ResultCollectionViewCell" customModule="Elina" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="159" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="159" height="50"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOa-gn-gVt">
-                        <rect key="frame" x="0.0" y="0.0" width="54" height="50"/>
-                        <color key="backgroundColor" red="0.96148135369999999" green="1" blue="0.35600108740000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="Button"/>
-                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z4E-Rn-ukR">
+                        <rect key="frame" x="8" y="3" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="TMu-0u-P4T"/>
+                            <constraint firstAttribute="height" constant="44" id="r6y-7p-CsJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstItem="z4E-Rn-ukR" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="IVs-lm-MVL"/>
+                <constraint firstItem="z4E-Rn-ukR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="V18-lM-0UQ"/>
+                <constraint firstItem="z4E-Rn-ukR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="k1A-6Q-DWB"/>
+                <constraint firstItem="z4E-Rn-ukR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="mnI-Yd-MgX"/>
+                <constraint firstItem="z4E-Rn-ukR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="mpz-6o-kNh"/>
+            </constraints>
             <size key="customSize" width="159" height="50"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IVs-lm-MVL"/>
+                    <exclude reference="k1A-6Q-DWB"/>
+                    <exclude reference="mnI-Yd-MgX"/>
+                </mask>
+            </variation>
             <connections>
-                <outlet property="yellowButton" destination="GOa-gn-gVt" id="Fdf-Gr-PAP"/>
+                <outlet property="photoImageView" destination="z4E-Rn-ukR" id="neV-I1-CI2"/>
             </connections>
             <point key="canvasLocation" x="407.5" y="293"/>
         </collectionViewCell>

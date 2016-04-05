@@ -8,13 +8,32 @@
 
 import UIKit
 
+protocol PickPictureDelegate {
+    func pickPictureDidPressedButton(sender: PhotoCollectionViewCell)
+}
+
+
 class PhotoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var pickPhotoButton: UIButton!
+    var delegate: PickPictureDelegate?
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        pickPhotoButton.layer.cornerRadius = CGRectGetHeight(pickPhotoButton.bounds) / 2.0
+    }
+    
+    @IBAction func pickPhotoButtonPressed(sender: UIButton) {
+        if let delegate = delegate {
+            delegate.pickPictureDidPressedButton(self)
+        }
     }
 
 }

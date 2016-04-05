@@ -10,11 +10,17 @@ import UIKit
 
 class ResultCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var yellowButton: UIButton!
+    @IBOutlet var photoImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        photoImageView.layer.cornerRadius = CGRectGetHeight(photoImageView.bounds) / 2.0
     }
 
 }

@@ -13,15 +13,32 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="191" height="53"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-EA-yEB">
-                        <rect key="frame" x="0.0" y="0.0" width="58" height="53"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-EA-yEB">
+                        <rect key="frame" x="8" y="5" width="44" height="44"/>
                         <color key="backgroundColor" red="0.75230800750000004" green="0.93087393360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="BhN-2K-Hua"/>
+                            <constraint firstAttribute="height" constant="44" id="F3i-kJ-nGQ"/>
+                        </constraints>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="pickPhotoButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="D6q-lG-8T8"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstItem="0Fb-EA-yEB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="TTg-FF-gLm"/>
+                <constraint firstItem="0Fb-EA-yEB" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Zhl-fh-2zC"/>
+                <constraint firstItem="0Fb-EA-yEB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="rUc-qt-eqG"/>
+            </constraints>
             <size key="customSize" width="191" height="53"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Zhl-fh-2zC"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="pickPhotoButton" destination="0Fb-EA-yEB" id="Lg2-o8-nBm"/>
             </connections>
