@@ -26,13 +26,24 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         imagePicker.delegate = self
     }
     
+//    override func viewDidAppear(animated: Bool) {
+//        photoCollectionView.reloadData()
+//    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+//        if myControllerImageView == nil {
+//            return 1
+//        } else {
+//        return 2
+//        }
+        
         return 2
     }
     
     func collectionView(let collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        if indexPath.row == 0 {
+        if indexPath.row == 1 {
             let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("CellTwo", forIndexPath: indexPath) as! ResultCollectionViewCell
             cell.photoImageView.backgroundColor = UIColor.brownColor()
             cell.delegate = self
@@ -52,6 +63,15 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
+        if indexPath.row == 1 {
+            if myControllerImageView == nil {
+                let cellWidth = CGFloat(0)
+                let cellHeight = CGFloat(0)
+                let size = CGSizeMake(cellWidth, cellHeight)
+                return size
+            }
+        }
+        
         let cellWidth = CGFloat(60)
         let cellHeight = CGFloat(60)
         let size = CGSizeMake(cellWidth, cellHeight)
@@ -87,8 +107,9 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-
+        
         myControllerImageView.image = pickedImage
+        photoCollectionView.reloadData()
         dismissViewControllerAnimated(true, completion: nil)
     }
 }
