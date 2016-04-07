@@ -1,5 +1,5 @@
 //
-//  PhotoCollectionViewCell.swift
+//  ResultCollectionViewCell.swift
 //  Elina
 //
 //  Created by Elina Samardjieva on 4/4/16.
@@ -8,14 +8,18 @@
 
 import UIKit
 
-protocol PickPictureFromGalleryDelegate {
-    func pickPictureFromGalleryDidPressedButton(sender: PhotoCollectionViewCell)
+protocol ShowPhotoDelegate {
+    func takeImageView(myImageView: UIImageView, sender: PhotoCollectionViewCell) -> UIImageView
+    func deleteCell(sender: UIButton)
 }
 
-class PhotoCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var pickPhotoButton: UIButton!
-    var delegate: PickPictureFromGalleryDelegate?
+class PhotoCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet var photoImageView: UIImageView!
+    @IBOutlet var deleteButton: UIButton!
+
+    var delegate: ShowPhotoDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,12 +27,35 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        pickPhotoButton.layer.cornerRadius = CGRectGetHeight(pickPhotoButton.bounds) / 2.0
+        
+        photoImageView.clipsToBounds = true
+        photoImageView.contentMode = .ScaleAspectFill
+        photoImageView.layer.cornerRadius = CGRectGetHeight(photoImageView.bounds) / 2.0
+        
+        deleteButton.layer.cornerRadius = CGRectGetHeight(deleteButton.bounds) / 2.0
+        
+        deleteButton.hidden = true
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "showDeleteButton")
+        self.addGestureRecognizer(tap)
     }
     
-    @IBAction func pickPhotoButtonPressed(sender: UIButton) {
+    func passPhotoImageView() {
         if let delegate = delegate {
-            delegate.pickPictureFromGalleryDidPressedButton(self)
+            delegate.takeImageView(photoImageView, sender: self)
+        }
+    }
+    
+    @IBAction func deleteRow(sender: UIButton) {
+        if let delegate = delegate {
+            delegate.deleteCell(sender)
+        }
+    }
+    
+    func showDeleteButton() {
+        if deleteButton.hidden == true {
+            deleteButton.hidden = false
+        } else {
+            deleteButton.hidden = true
         }
     }
 }

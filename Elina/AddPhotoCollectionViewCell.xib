@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCell" id="gTV-IL-0wX" customClass="AddPhotoCollectionViewCell" customModule="Elina" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="165"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGd-iR-kU1">
+                        <rect key="frame" x="8" y="3" width="44" height="44"/>
+                        <color key="backgroundColor" red="0.96148135369999999" green="1" blue="0.35600108740000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="GVF-Z2-Nwo"/>
+                            <constraint firstAttribute="height" constant="44" id="yhF-VT-bL1"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="pickPhotoButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4tA-xM-rBh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="XGd-iR-kU1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="ACj-3x-ZKg"/>
+                <constraint firstItem="XGd-iR-kU1" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="NVW-GW-Xnh"/>
+                <constraint firstItem="XGd-iR-kU1" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="7" id="PRa-P3-n2j"/>
+                <constraint firstItem="XGd-iR-kU1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="U8j-f2-z2z"/>
+                <constraint firstItem="XGd-iR-kU1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="WPe-9r-u5Z"/>
+            </constraints>
+            <size key="customSize" width="322" height="165"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="NVW-GW-Xnh"/>
+                    <exclude reference="PRa-P3-n2j"/>
+                    <exclude reference="U8j-f2-z2z"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="pickPhotoButton" destination="XGd-iR-kU1" id="pUP-d6-2Q4"/>
+            </connections>
+            <point key="canvasLocation" x="602" y="363.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

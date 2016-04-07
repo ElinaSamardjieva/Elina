@@ -35,5 +35,4 @@ class CustomTextField: UITextField {
                 attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         }
     }
-
 }

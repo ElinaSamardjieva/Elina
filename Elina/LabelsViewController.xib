@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabelsViewController" customModule="Elina" customModuleProvider="target">
+            <connections>
+                <outlet property="labelsTableView" destination="6vU-e4-Mb9" id="wKR-Jp-HUy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6vU-e4-Mb9">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.78339800370000001" green="1" blue="0.66944703120000004" alpha="0.90395057619999997" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="SEV-6Q-3qI"/>
+                        <outlet property="delegate" destination="-1" id="zT7-ZG-UKt"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6vU-e4-Mb9" secondAttribute="bottom" constant="8" id="JIh-zH-UG5">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="6vU-e4-Mb9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="OF3-Ro-F0H">
+                    <variation key="heightClass=regular-widthClass=compact" constant="63"/>
+                </constraint>
+                <constraint firstItem="6vU-e4-Mb9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="az2-8B-pyt"/>
+                <constraint firstAttribute="trailing" secondItem="6vU-e4-Mb9" secondAttribute="trailing" id="fok-ee-ORa"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="6vU-e4-Mb9"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="JIh-zH-UG5"/>
+                    <exclude reference="OF3-Ro-F0H"/>
+                    <exclude reference="az2-8B-pyt"/>
+                    <exclude reference="fok-ee-ORa"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="6vU-e4-Mb9"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="JIh-zH-UG5"/>
+                    <include reference="OF3-Ro-F0H"/>
+                    <include reference="az2-8B-pyt"/>
+                    <include reference="fok-ee-ORa"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
