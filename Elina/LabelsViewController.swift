@@ -8,15 +8,19 @@
 
 import UIKit
 
-class LabelsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ChangeLabelsTitleDelegate {
+class LabelsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var labelsTableView: UITableView!
+    
+    var arrayOfStrings: [String] = ["AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "BBBBBBBBBBBBBBBBBBBBBBBBBBBBB", "A", "B"]
+    var secondArrayOfStrings: [String] = ["A", "B"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         labelsTableView.registerNib(UINib(nibName: "LabelsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        self.labelsTableView.estimatedRowHeight = 100.0
+        
+        self.labelsTableView.estimatedRowHeight = 10.0
         self.labelsTableView.rowHeight = UITableViewAutomaticDimension
     }
     
@@ -26,22 +30,15 @@ class LabelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return arrayOfStrings.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = labelsTableView.dequeueReusableCellWithIdentifier("Cell") as! LabelsTableViewCell
-        cell.delegate = self
-        cell.change()
+        
+        cell.topLabel.text = arrayOfStrings[indexPath.row]
+       // cell.bottomLabel.text = secondArrayOfStrings[indexPath.row]
         
         return cell
-    }
-    
-    func labelNameWillChange(sender: LabelsTableViewCell) {
-//        sender.topLabel.text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-//        sender.bottomLabel.text = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
-    
-        sender.topLabel.text = "A"
-        sender.bottomLabel.text = "B"
     }
 }

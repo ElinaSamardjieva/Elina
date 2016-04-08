@@ -8,25 +8,12 @@
 
 import UIKit
 
-protocol ChangeLabelsTitleDelegate {
-    func labelNameWillChange(sender: LabelsTableViewCell)
-}
-
-
 class LabelsTableViewCell: UITableViewCell {
 
     @IBOutlet var topLabel: UILabel!
     @IBOutlet var bottomLabel: UILabel!
     
-    var delegate: ChangeLabelsTitleDelegate?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    func change() {
-        if let delegate = delegate {
-            delegate.labelNameWillChange(self)
-        }
     }
 }

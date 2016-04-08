@@ -32,8 +32,6 @@ class PopUpViewController: UIViewController, PopUpViewDelegate {
         // Dismiss keyboard
         view.endEditing(true)
         
-
-        
         popUpView.show()
     }
     

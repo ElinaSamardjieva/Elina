@@ -67,13 +67,13 @@
                     <exclude reference="5zg-EE-P15"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="FIk-H8-ypb"/>
+                    <exclude reference="e8e-V0-Q3Y"/>
+                    <exclude reference="PrP-fW-6qC"/>
+                    <exclude reference="laX-X5-95Y"/>
                     <exclude reference="L0X-Wc-Hcm"/>
                     <exclude reference="cTw-Et-bE7"/>
                     <exclude reference="qzg-Ac-aSe"/>
-                    <exclude reference="PrP-fW-6qC"/>
-                    <exclude reference="laX-X5-95Y"/>
-                    <exclude reference="FIk-H8-ypb"/>
-                    <exclude reference="e8e-V0-Q3Y"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -83,13 +83,13 @@
                     <include reference="5zg-EE-P15"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="FIk-H8-ypb"/>
+                    <include reference="e8e-V0-Q3Y"/>
+                    <include reference="PrP-fW-6qC"/>
+                    <include reference="laX-X5-95Y"/>
                     <include reference="L0X-Wc-Hcm"/>
                     <include reference="cTw-Et-bE7"/>
                     <include reference="qzg-Ac-aSe"/>
-                    <include reference="PrP-fW-6qC"/>
-                    <include reference="laX-X5-95Y"/>
-                    <include reference="FIk-H8-ypb"/>
-                    <include reference="e8e-V0-Q3Y"/>
                 </mask>
             </variation>
         </view>

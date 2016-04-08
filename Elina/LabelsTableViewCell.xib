@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="131" id="KGk-i7-Jjw" customClass="LabelsTableViewCell" customModule="Elina" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="342" height="131"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="92" id="KGk-i7-Jjw" customClass="LabelsTableViewCell" customModule="Elina" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="92"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="342" height="130"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EI2-Bx-LYf">
@@ -43,7 +43,7 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQR-dP-Xe4">
-                        <rect key="frame" x="8" y="84" width="326" height="21"/>
+                        <rect key="frame" x="8" y="54" width="326" height="21"/>
                         <color key="backgroundColor" red="0.92721274679999999" green="0.95957485460000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="304" id="9wf-tt-01o"/>
@@ -75,12 +75,13 @@
                     <constraint firstItem="EI2-Bx-LYf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="MOS-5V-dyP"/>
                     <constraint firstItem="ZQR-dP-Xe4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="N3i-qx-llP"/>
                     <constraint firstItem="ZQR-dP-Xe4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="NKv-ek-dyN"/>
+                    <constraint firstItem="ZQR-dP-Xe4" firstAttribute="top" secondItem="EI2-Bx-LYf" secondAttribute="bottom" constant="22" id="ZIU-Ug-z8g"/>
                     <constraint firstItem="EI2-Bx-LYf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="aZJ-uX-n3Y"/>
                     <constraint firstItem="EI2-Bx-LYf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="axv-Vj-Bh0"/>
                     <constraint firstItem="EI2-Bx-LYf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="feV-dg-McN"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZQR-dP-Xe4" secondAttribute="bottom" constant="8" id="haI-4h-B1O"/>
                     <constraint firstItem="ZQR-dP-Xe4" firstAttribute="top" secondItem="EI2-Bx-LYf" secondAttribute="bottom" constant="52" id="jnL-Pd-fLs"/>
                     <constraint firstItem="EI2-Bx-LYf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="mbT-te-T0g"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ZQR-dP-Xe4" secondAttribute="bottom" constant="17" id="pVb-LX-2Yr"/>
                     <constraint firstItem="ZQR-dP-Xe4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rnl-wC-ard"/>
                     <constraint firstItem="EI2-Bx-LYf" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="usJ-Mg-hIA"/>
                     <constraint firstItem="EI2-Bx-LYf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="y6S-xX-Zhl"/>
@@ -95,6 +96,7 @@
                         <exclude reference="feV-dg-McN"/>
                         <exclude reference="mbT-te-T0g"/>
                         <exclude reference="8Qq-Dz-Zm7"/>
+                        <exclude reference="ADl-bq-HMB"/>
                         <exclude reference="J60-Ip-kE8"/>
                         <exclude reference="JqK-og-PJ9"/>
                         <exclude reference="NKv-ek-dyN"/>
@@ -107,7 +109,7 @@
                 <outlet property="bottomLabel" destination="ZQR-dP-Xe4" id="ksR-OD-XVL"/>
                 <outlet property="topLabel" destination="EI2-Bx-LYf" id="Lyg-hM-jlr"/>
             </connections>
-            <point key="canvasLocation" x="339" y="423.5"/>
+            <point key="canvasLocation" x="339" y="404"/>
         </tableViewCell>
     </objects>
 </document>
