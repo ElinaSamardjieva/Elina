@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let initialViewController = LabelsViewController(nibName: "LabelsViewController", bundle: nil)
+        let initialViewController = PhotoViewController(nibName: "PhotoViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: initialViewController)
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)

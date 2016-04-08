@@ -29,7 +29,7 @@
                         </constraints>
                         <state key="normal" title="x"/>
                         <connections>
-                            <action selector="deleteRow:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0ep-cn-i8e"/>
+                            <action selector="deletePhotoCell:" destination="gTV-IL-0wX" eventType="touchUpInside" id="D9G-fy-p3E"/>
                         </connections>
                     </button>
                 </subviews>

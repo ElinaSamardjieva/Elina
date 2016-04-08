@@ -8,18 +8,16 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PickPictureFromGalleryDelegate, ShowPhotoDelegate {
+class PhotoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PickPictureFromGalleryDelegate, DeletePhotoDelegate {
 
     @IBOutlet var photoCollectionView: UICollectionView!
     
     var imagePicker = UIImagePickerController()
     var myControllerImageView: UIImageView!
-    var pickedImagesArray: [AnyObject] = []
+    var pickedImagesArray: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.automaticallyAdjustsScrollViewInsets = false
         
         photoCollectionView.registerNib(UINib(nibName: "PhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         photoCollectionView.registerNib(UINib(nibName: "AddPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
@@ -45,31 +43,20 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(let collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        if pickedImagesArray.count == 0 {
-            let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("ButtonCell", forIndexPath: indexPath) as! AddPhotoCollectionViewCell
-            cell.pickPhotoButton.setTitle("+", forState: .Normal)
-            cell.delegate = self
-            
-            return cell
-            
-        } else {
-        
-        if indexPath.row == (pickedImagesArray.count) {
-            
-            let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("ButtonCell", forIndexPath: indexPath) as! AddPhotoCollectionViewCell
-            cell.pickPhotoButton.setTitle("+", forState: .Normal)
-            cell.delegate = self
-            
-            return cell
-            
-        } else {
+        if indexPath.row < pickedImagesArray.count {
             let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCollectionViewCell
             cell.photoImageView.backgroundColor = UIColor.brownColor()
             cell.delegate = self
-            cell.passPhotoImageView() // HERE IS THE PROBLEM!!!!
-            
+            cell.photoImageView.image = pickedImagesArray[indexPath.row]
+
             return cell
-            }
+            
+        } else {
+            let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("ButtonCell", forIndexPath: indexPath) as! AddPhotoCollectionViewCell
+            cell.pickPhotoButton.setTitle("+", forState: .Normal)
+            cell.delegate = self
+
+            return cell
         }
     }
     
@@ -95,15 +82,7 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    
-    // MARK: - ShowPhotoDelegate
-    
-    func takeImageView(myImageView: UIImageView, sender: PhotoCollectionViewCell) -> UIImageView {
-        myControllerImageView = myImageView
-        return myControllerImageView
-    }
-    
-    // MARK: Take the picked photo
+    // MARK: - Add photo to array
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -111,35 +90,18 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         pickedImagesArray.append(pickedImage!)
         photoCollectionView.reloadData()
         
-        // TEST
-       // Nil
-//        let cell = photoCollectionView.viewWithTag(0) as! PhotoCollectionViewCell
-//        cell.photoImageView.image = pickedImage
-       // cell!.photoImageView.image = pickedImage
-        
-        // NB!!!!!!!!
-//        if let myControllerImageView = myControllerImageView {
-//        myControllerImageView.image = pickedImage
-//        }
-        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func deleteCell(sender: UIButton) {
+    // MARK: - DeletePhotoDelegate
+    
+    func deleteButtonDidPressDelete(sender: PhotoCollectionViewCell) {
         
         var indexPath: NSIndexPath!
         
-        if let button = sender as? UIButton {
-            if let superview = button.superview {
-                if let cell = superview.superview as? PhotoCollectionViewCell {
-                    indexPath = photoCollectionView.indexPathForCell(cell)
-                }
-            }
-        }
-
-        print("Index path")
-        print(indexPath.row)
+        indexPath = photoCollectionView.indexPathForCell(sender)
         pickedImagesArray.removeAtIndex(indexPath.row)
+        
         photoCollectionView.reloadData()
     }
 }
