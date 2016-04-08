@@ -101,7 +101,8 @@ class PhotoViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         indexPath = photoCollectionView.indexPathForCell(sender)
         pickedImagesArray.removeAtIndex(indexPath.row)
+        photoCollectionView.deleteItemsAtIndexPaths([indexPath])
         
-        photoCollectionView.reloadData()
+       // photoCollectionView.reloadData()
     }
 }

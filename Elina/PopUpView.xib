@@ -34,15 +34,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLK-xu-6Cj">
                     <rect key="frame" x="15" y="188" width="570" height="164"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvY-13-ZUE">
-                            <rect key="frame" x="16" y="16" width="538" height="80"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="wS5-Bs-lHF"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Weq-Ht-KtB">
                             <rect key="frame" x="8" y="112" width="554" height="44"/>
                             <subviews>
@@ -100,6 +91,15 @@
                                 <constraint firstItem="CIS-4u-WeA" firstAttribute="top" secondItem="Nec-8N-4GD" secondAttribute="top" id="sPF-V1-bJt"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvY-13-ZUE">
+                            <rect key="frame" x="16" y="16" width="538" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="wS5-Bs-lHF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.75230800748092563" green="0.93087393361303383" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -116,6 +116,7 @@
                         <constraint firstAttribute="trailing" secondItem="Weq-Ht-KtB" secondAttribute="trailing" constant="8" id="dWB-mI-BUP"/>
                         <constraint firstItem="MvY-13-ZUE" firstAttribute="leading" secondItem="FLK-xu-6Cj" secondAttribute="leading" constant="16" id="gEV-bM-VHu"/>
                         <constraint firstAttribute="height" constant="181" id="jYL-a1-R7f"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="164" id="qFc-f9-hfZ"/>
                         <constraint firstItem="Nec-8N-4GD" firstAttribute="centerY" secondItem="Weq-Ht-KtB" secondAttribute="centerY" id="ySP-0W-WpB"/>
                     </constraints>
                     <variation key="default">
@@ -123,6 +124,7 @@
                             <exclude reference="SMt-nO-IyN"/>
                             <exclude reference="cjm-1m-cSS"/>
                             <exclude reference="jYL-a1-R7f"/>
+                            <exclude reference="qFc-f9-hfZ"/>
                         </mask>
                     </variation>
                 </view>
@@ -135,9 +137,9 @@
                 <constraint firstItem="FLK-xu-6Cj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="LfT-6x-CZb"/>
                 <constraint firstAttribute="trailing" secondItem="Tm1-FZ-JSx" secondAttribute="trailing" id="Mht-VV-aZ4"/>
                 <constraint firstItem="FLK-xu-6Cj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-30" id="gxm-bb-sxS"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FLK-xu-6Cj" secondAttribute="bottom" constant="40" id="qMo-Lt-iFl"/>
+                <constraint firstItem="FLK-xu-6Cj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="rFd-B3-hMA"/>
                 <constraint firstAttribute="bottom" secondItem="Tm1-FZ-JSx" secondAttribute="bottom" id="tFf-oF-W0p"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FLK-xu-6Cj" secondAttribute="bottom" constant="40" id="uo6-qK-eat"/>
-                <constraint firstItem="FLK-xu-6Cj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="zsT-lo-Hor"/>
             </constraints>
         </view>
     </objects>
