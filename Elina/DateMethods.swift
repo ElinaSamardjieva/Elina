@@ -14,6 +14,7 @@ extension NSDate {
         let dateFormatter = NSDateFormatter()
         // dateFormatter.dateStyle = .ShortStyle
         // dateFormatter.timeStyle = .NoStyle
+
         
        // dateFormatter.dateFormat = "dd MMM yyyy HH:mm:ss"
         dateFormatter.dateFormat = "dd MMM yyyy"

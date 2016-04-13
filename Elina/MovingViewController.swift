@@ -14,6 +14,8 @@ class MovingViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var rightTableView: UITableView!
     @IBOutlet var grayView: UIView!
     
+    var myImageUrl = "http://resources.wepushbuttons.com.au/wp-content/uploads/sites/2/2012/03/twitter-logo-small.jpg"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -42,6 +44,8 @@ class MovingViewController: UIViewController, UITableViewDataSource {
 //                cell.contentView.backgroundColor = UIColor.clearColor()
 //            }
 //        }
+        
+        cell.cellImageView.loadImage(myImageUrl)
                 
         return cell
     }

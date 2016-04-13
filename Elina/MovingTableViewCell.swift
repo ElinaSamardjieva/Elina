@@ -12,7 +12,7 @@ class MovingTableViewCell: UITableViewCell {
 
  //   @IBOutlet var cellLabel: UILabel!
     
-    @IBOutlet var cellImageView: UIImageView!
+    @IBOutlet var cellImageView: ImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
