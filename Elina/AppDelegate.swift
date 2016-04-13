@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let initialViewController = LabelsViewController(nibName: "LabelsViewController", bundle: nil)
+        let initialViewController = MovingViewController(nibName: "MovingViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: initialViewController)
+        navigationController.navigationBarHidden = true
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = navigationController

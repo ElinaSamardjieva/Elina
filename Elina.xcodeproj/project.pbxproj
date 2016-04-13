@@ -18,13 +18,15 @@
 		C309ADCC1CAE9EE100686FFF /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309ADCB1CAE9EE100686FFF /* PopUpView.swift */; };
 		C309ADCE1CAE9EF400686FFF /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C309ADCD1CAE9EF400686FFF /* PopUpView.xib */; };
 		C333E5991CAC098900DA49D4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333E5981CAC098900DA49D4 /* CustomTextField.swift */; };
-		C333E59F1CAC1B8300DA49D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */; };
 		C33A6B3B1CB693B60035867D /* LabelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A6B391CB693B50035867D /* LabelsViewController.swift */; };
 		C33A6B3C1CB693B60035867D /* LabelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A6B3A1CB693B60035867D /* LabelsViewController.xib */; };
 		C33A6B421CB698B60035867D /* LabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A6B401CB698B60035867D /* LabelsTableViewCell.swift */; };
 		C33A6B431CB698B60035867D /* LabelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A6B411CB698B60035867D /* LabelsTableViewCell.xib */; };
 		C343DA2A1CB2B2DC0087ED8A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C343DA281CB2B2DC0087ED8A /* PhotoViewController.swift */; };
 		C343DA2B1CB2B2DC0087ED8A /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C343DA291CB2B2DC0087ED8A /* PhotoViewController.xib */; };
+		C345E1EA1CBD1ECE00EF983C /* MovingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345E1E81CBD1ECE00EF983C /* MovingViewController.swift */; };
+		C345E1EB1CBD1ECE00EF983C /* MovingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345E1E91CBD1ECE00EF983C /* MovingViewController.xib */; };
+		C345E1EF1CBD248200EF983C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C345E1EE1CBD248200EF983C /* Assets.xcassets */; };
 		C34AB9C61CB55C8F00B52D05 /* AddPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AB9C41CB55C8F00B52D05 /* AddPhotoCollectionViewCell.swift */; };
 		C34AB9C71CB55C8F00B52D05 /* AddPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34AB9C51CB55C8F00B52D05 /* AddPhotoCollectionViewCell.xib */; };
 		C34AB9CA1CB55FC700B52D05 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AB9C81CB55FC700B52D05 /* PhotoCollectionViewCell.swift */; };
@@ -32,6 +34,8 @@
 		C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */; };
 		C351BF7C1CAA86A600332B18 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351BF7B1CAA86A600332B18 /* DatePickerView.swift */; };
 		C351BF7E1CAA891B00332B18 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C351BF7D1CAA891B00332B18 /* DatePickerView.xib */; };
+		C38D7CAC1CBD4332009519D2 /* MovingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D7CAA1CBD4332009519D2 /* MovingTableViewCell.swift */; };
+		C38D7CAD1CBD4332009519D2 /* MovingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38D7CAB1CBD4332009519D2 /* MovingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,13 +52,15 @@
 		C309ADCB1CAE9EE100686FFF /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		C309ADCD1CAE9EF400686FFF /* PopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
 		C333E5981CAC098900DA49D4 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C33A6B391CB693B50035867D /* LabelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsViewController.swift; sourceTree = "<group>"; };
 		C33A6B3A1CB693B60035867D /* LabelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsViewController.xib; sourceTree = "<group>"; };
 		C33A6B401CB698B60035867D /* LabelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsTableViewCell.swift; sourceTree = "<group>"; };
 		C33A6B411CB698B60035867D /* LabelsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsTableViewCell.xib; sourceTree = "<group>"; };
 		C343DA281CB2B2DC0087ED8A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C343DA291CB2B2DC0087ED8A /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		C345E1E81CBD1ECE00EF983C /* MovingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingViewController.swift; sourceTree = "<group>"; };
+		C345E1E91CBD1ECE00EF983C /* MovingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovingViewController.xib; sourceTree = "<group>"; };
+		C345E1EE1CBD248200EF983C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34AB9C41CB55C8F00B52D05 /* AddPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C34AB9C51CB55C8F00B52D05 /* AddPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		C34AB9C81CB55FC700B52D05 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 		C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kitty-kitties-9109284-500-460.jpg"; sourceTree = "<group>"; };
 		C351BF7B1CAA86A600332B18 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		C351BF7D1CAA891B00332B18 /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		C38D7CAA1CBD4332009519D2 /* MovingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingTableViewCell.swift; sourceTree = "<group>"; };
+		C38D7CAB1CBD4332009519D2 /* MovingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovingTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +108,11 @@
 				83454AEE1CA91AF60031648C /* Managers */,
 				83454AED1CA91AEF0031648C /* Views */,
 				83454AE71CA919030031648C /* ViewControllers */,
-				C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */,
 				83454ADE1CA918CA0031648C /* LaunchScreen.storyboard */,
 				83454AE11CA918CA0031648C /* Info.plist */,
+				C345E1EE1CBD248200EF983C /* Assets.xcassets */,
+				C34CC4921CA929240008C492 /* kitty-kitties-9109284-500-460.jpg */,
 				83454AD91CA918CA0031648C /* Elina.xcdatamodeld */,
-				C333E59E1CAC1B8300DA49D4 /* Assets.xcassets */,
 			);
 			path = Elina;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 		83454AE71CA919030031648C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C345E1E71CBD1EBB00EF983C /* MovingViewController */,
 				C33A6B3D1CB693BA0035867D /* LabelsViewController */,
 				C343DA1E1CB2A0260087ED8A /* PhotoViewController */,
 				83454AE81CA919120031648C /* HomeViewController */,
@@ -132,6 +141,7 @@
 		83454AED1CA91AEF0031648C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C345E1ED1CBD1EF000EF983C /* MovingTableViewCell */,
 				C333E5981CAC098900DA49D4 /* CustomTextField.swift */,
 				C33A6B3E1CB698870035867D /* LabelsCollectionViewCell */,
 				C343DA231CB2ABDB0087ED8A /* PhotoCollectionViewCell */,
@@ -228,6 +238,24 @@
 			name = PhotoCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		C345E1E71CBD1EBB00EF983C /* MovingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C345E1E81CBD1ECE00EF983C /* MovingViewController.swift */,
+				C345E1E91CBD1ECE00EF983C /* MovingViewController.xib */,
+			);
+			name = MovingViewController;
+			sourceTree = "<group>";
+		};
+		C345E1ED1CBD1EF000EF983C /* MovingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C38D7CAA1CBD4332009519D2 /* MovingTableViewCell.swift */,
+				C38D7CAB1CBD4332009519D2 /* MovingTableViewCell.xib */,
+			);
+			name = MovingTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +288,7 @@
 				TargetAttributes = {
 					83454ACE1CA918CA0031648C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 55KE7JDX84;
 					};
 				};
 			};
@@ -288,12 +317,14 @@
 			files = (
 				83454AE01CA918CA0031648C /* LaunchScreen.storyboard in Resources */,
 				C343DA2B1CB2B2DC0087ED8A /* PhotoViewController.xib in Resources */,
+				C345E1EB1CBD1ECE00EF983C /* MovingViewController.xib in Resources */,
 				C34CC4931CA929240008C492 /* kitty-kitties-9109284-500-460.jpg in Resources */,
 				C34AB9C71CB55C8F00B52D05 /* AddPhotoCollectionViewCell.xib in Resources */,
 				C351BF7E1CAA891B00332B18 /* DatePickerView.xib in Resources */,
+				C345E1EF1CBD248200EF983C /* Assets.xcassets in Resources */,
 				83454AEC1CA9192D0031648C /* HomeViewController.xib in Resources */,
-				C333E59F1CAC1B8300DA49D4 /* Assets.xcassets in Resources */,
 				C309ADCE1CAE9EF400686FFF /* PopUpView.xib in Resources */,
+				C38D7CAD1CBD4332009519D2 /* MovingTableViewCell.xib in Resources */,
 				C34AB9CB1CB55FC700B52D05 /* PhotoCollectionViewCell.xib in Resources */,
 				C33A6B3C1CB693B60035867D /* LabelsViewController.xib in Resources */,
 				C33A6B431CB698B60035867D /* LabelsTableViewCell.xib in Resources */,
@@ -309,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83FA14651CAAB85D0028FFE6 /* DateMethods.swift in Sources */,
+				C38D7CAC1CBD4332009519D2 /* MovingTableViewCell.swift in Sources */,
 				C34AB9C61CB55C8F00B52D05 /* AddPhotoCollectionViewCell.swift in Sources */,
 				C309ADCC1CAE9EE100686FFF /* PopUpView.swift in Sources */,
 				C33A6B3B1CB693B60035867D /* LabelsViewController.swift in Sources */,
@@ -318,6 +350,7 @@
 				C34AB9CA1CB55FC700B52D05 /* PhotoCollectionViewCell.swift in Sources */,
 				C333E5991CAC098900DA49D4 /* CustomTextField.swift in Sources */,
 				C343DA2A1CB2B2DC0087ED8A /* PhotoViewController.swift in Sources */,
+				C345E1EA1CBD1ECE00EF983C /* MovingViewController.swift in Sources */,
 				83454ADB1CA918CA0031648C /* Elina.xcdatamodeld in Sources */,
 				C351BF7C1CAA86A600332B18 /* DatePickerView.swift in Sources */,
 				83454AEB1CA9192D0031648C /* HomeViewController.swift in Sources */,
@@ -423,10 +456,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Elina/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = digimark.Elina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -434,10 +469,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Elina/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = digimark.Elina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -12,8 +12,8 @@ class LabelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet var labelsTableView: UITableView!
     
-    var arrayOfStrings: [String] = ["AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "BBBBBBBBBBBBBBBBBBBBBBBBBBBBB", "A", "B"]
-    var secondArrayOfStrings: [String] = ["A", "B"]
+    var arrayOfStrings: [String] = ["A", "B"]
+    //var secondArrayOfStrings: [String] = ["A", "B"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class LabelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = labelsTableView.dequeueReusableCellWithIdentifier("Cell") as! LabelsTableViewCell
         
         cell.topLabel.text = arrayOfStrings[indexPath.row]
-       // cell.bottomLabel.text = secondArrayOfStrings[indexPath.row]
+        //cell.bottomLabel.text = secondArrayOfStrings[indexPath.row]
         
         return cell
     }
