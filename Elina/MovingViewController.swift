@@ -37,6 +37,12 @@ class MovingViewController: UIViewController, UITableViewDataSource {
         rightTableView.separatorStyle = .None
         leftTableView.showsVerticalScrollIndicator = false
         rightTableView.showsVerticalScrollIndicator = false
+        
+        //Tap Gesture
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "scrollView")
+        leftTableView.addGestureRecognizer(tap)
+        
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,4 +69,9 @@ class MovingViewController: UIViewController, UITableViewDataSource {
             return 250
         }
     }
+    
+    func scrollView() {
+    }
 }
+
+//         rightTableView.scrollToRowAtIndexPath(NSIndexPath(index: 1), atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
