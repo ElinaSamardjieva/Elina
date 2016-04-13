@@ -141,8 +141,8 @@
 		83454AED1CA91AEF0031648C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C345E1ED1CBD1EF000EF983C /* MovingTableViewCell */,
 				C333E5981CAC098900DA49D4 /* CustomTextField.swift */,
+				C345E1ED1CBD1EF000EF983C /* MovingTableViewCell */,
 				C33A6B3E1CB698870035867D /* LabelsCollectionViewCell */,
 				C343DA231CB2ABDB0087ED8A /* PhotoCollectionViewCell */,
 				C309ADC91CAE9E9E00686FFF /* DatePickerView */,
