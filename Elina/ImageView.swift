@@ -16,6 +16,7 @@ class ImageView: UIImageView, NSURLConnectionDataDelegate {
     var urlString: String?
 
     func loadImage(urlStr: String) {
+    
         
         contentMode = .ScaleAspectFill
         clipsToBounds = true
