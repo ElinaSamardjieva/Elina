@@ -25,6 +25,7 @@ class MovingTableViewCell: UITableViewCell {
         selectionStyle = .None
         
         backgroundColor = UIColor.clearColor()
+        
     }
     
     override func layoutSubviews() {

@@ -39,6 +39,7 @@
 		C33A6B3C1CB693B60035867D /* LabelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A6B3A1CB693B60035867D /* LabelsViewController.xib */; };
 		C33A6B421CB698B60035867D /* LabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A6B401CB698B60035867D /* LabelsTableViewCell.swift */; };
 		C33A6B431CB698B60035867D /* LabelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A6B411CB698B60035867D /* LabelsTableViewCell.xib */; };
+		C33A8B211CBF95B9008A2B60 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A8B201CBF95B9008A2B60 /* DataManager.swift */; };
 		C343DA2A1CB2B2DC0087ED8A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C343DA281CB2B2DC0087ED8A /* PhotoViewController.swift */; };
 		C343DA2B1CB2B2DC0087ED8A /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C343DA291CB2B2DC0087ED8A /* PhotoViewController.xib */; };
 		C345E1EA1CBD1ECE00EF983C /* MovingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345E1E81CBD1ECE00EF983C /* MovingViewController.swift */; };
@@ -108,6 +109,7 @@
 		C33A6B3A1CB693B60035867D /* LabelsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsViewController.xib; sourceTree = "<group>"; };
 		C33A6B401CB698B60035867D /* LabelsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsTableViewCell.swift; sourceTree = "<group>"; };
 		C33A6B411CB698B60035867D /* LabelsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelsTableViewCell.xib; sourceTree = "<group>"; };
+		C33A8B201CBF95B9008A2B60 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C343DA281CB2B2DC0087ED8A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C343DA291CB2B2DC0087ED8A /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		C345E1E81CBD1ECE00EF983C /* MovingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		83454AF01CA91B0B0031648C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C33A8B201CBF95B9008A2B60 /* DataManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				C34AB9CA1CB55FC700B52D05 /* PhotoCollectionViewCell.swift in Sources */,
 				C333E5991CAC098900DA49D4 /* CustomTextField.swift in Sources */,
 				C343DA2A1CB2B2DC0087ED8A /* PhotoViewController.swift in Sources */,
+				C33A8B211CBF95B9008A2B60 /* DataManager.swift in Sources */,
 				C3350BA91CBE689700A17B28 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C3350BA11CBE689700A17B28 /* SDWebImageDownloader.m in Sources */,
 				C3350BA41CBE689700A17B28 /* SDWebImagePrefetcher.m in Sources */,

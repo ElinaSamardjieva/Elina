@@ -8,21 +8,13 @@
 
 import UIKit
 
-class MovingViewController: UIViewController, UITableViewDataSource {
+class MovingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var leftTableView: UITableView!
     @IBOutlet var rightTableView: UITableView!
     @IBOutlet var grayView: UIView!
     
-    var myImageUrlArray = [
-        "http://myinternetscout.com/wp-content/uploads/2013/09/20130920-Small-Size-Business-Internet-Strategy.png",
-        "http://img.businessdictionary.com/article/small/category-small-business-7.jpg",
-        "http://themuslimstartup.com/wp-content/uploads/2014/08/Great-Ideas-For-Business.jpg",
-        "http://www.rjinvestment.co.uk/wp-content/uploads/2012/12/business-300px-300x200.jpg",
-        "http://www.bizben.com/artwork/increasing-284.jpg",
-        "http://www.mit.edu.au/sites/default/files/images/Business-01-optimised.jpg",
-        "https://www.sunyocc.edu/uploadedImages/Images/Wide/Business%20feature.jpg",
-        "http://420intel.com/sites/default/files/field/image/digital-business%5B1%5D.jpg"]
+    var lastContentOffset: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +30,14 @@ class MovingViewController: UIViewController, UITableViewDataSource {
         leftTableView.showsVerticalScrollIndicator = false
         rightTableView.showsVerticalScrollIndicator = false
         
-        //Tap Gesture
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "scrollView")
-        leftTableView.addGestureRecognizer(tap)
-        
-        
+        leftTableView.bounces = false
+        rightTableView.bounces = false
+
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myImageUrlArray.count
+       // return myImageUrlArray.count
+        return DataManager.sharedManager.dataArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,7 +46,7 @@ class MovingViewController: UIViewController, UITableViewDataSource {
         cell.cellImageView.image = nil
         
         if (indexPath.row != 2 && tableView == leftTableView) || tableView == rightTableView {
-            cell.cellImageView.loadImage(myImageUrlArray[indexPath.row])
+            cell.cellImageView.loadImage(DataManager.sharedManager.dataArray[indexPath.row])
         }
         
         return cell
@@ -70,8 +61,24 @@ class MovingViewController: UIViewController, UITableViewDataSource {
         }
     }
     
-    func scrollView() {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+    
+        let yRightTableViewOffset = rightTableView.contentOffset.y
+    
+        // Right table view
+        let newYRightTableViewOffsetDown = yRightTableViewOffset + 3
+        let newRightTableViewOffsetDown = CGPointMake(0, newYRightTableViewOffsetDown)
+    
+        let newYRightTableViewOffsetUp = yRightTableViewOffset - 3
+        let newRightTableViewOffsetUp = CGPointMake(0, newYRightTableViewOffsetUp)
+    
+        if scrollView == leftTableView {
+            if lastContentOffset < scrollView.contentOffset.y {
+                rightTableView.setContentOffset(newRightTableViewOffsetDown, animated: false)
+            } else if lastContentOffset > scrollView.contentOffset.y {
+                rightTableView.setContentOffset(newRightTableViewOffsetUp, animated: false)
+            }
+            self.lastContentOffset = scrollView.contentOffset.y
+        }
     }
 }
-
-//         rightTableView.scrollToRowAtIndexPath(NSIndexPath(index: 1), atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
