@@ -62,23 +62,38 @@ class MovingViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-    
-        let yRightTableViewOffset = rightTableView.contentOffset.y
-    
-        // Right table view
-        let newYRightTableViewOffsetDown = yRightTableViewOffset + 3
-        let newRightTableViewOffsetDown = CGPointMake(0, newYRightTableViewOffsetDown)
-    
-        let newYRightTableViewOffsetUp = yRightTableViewOffset - 3
-        let newRightTableViewOffsetUp = CGPointMake(0, newYRightTableViewOffsetUp)
-    
+
+        leftTableView.layer.removeAllAnimations()
+        var factor = (leftTableView.contentSize.height - leftTableView.bounds.size.height) / (rightTableView.contentSize.height - rightTableView.bounds.size.height)
+        
         if scrollView == leftTableView {
-            if lastContentOffset < scrollView.contentOffset.y {
-                rightTableView.setContentOffset(newRightTableViewOffsetDown, animated: false)
-            } else if lastContentOffset > scrollView.contentOffset.y {
-                rightTableView.setContentOffset(newRightTableViewOffsetUp, animated: false)
-            }
-            self.lastContentOffset = scrollView.contentOffset.y
+            rightTableView.contentOffset = CGPointMake(0, max(0, min(leftTableView.contentOffset.y / factor, rightTableView.contentSize.height - rightTableView.bounds.size.height)))
+        } else if scrollView == rightTableView {
+            leftTableView.contentOffset = CGPointMake(0, max(0, min(rightTableView.contentOffset.y * factor, leftTableView.contentSize.height - leftTableView.bounds.size.height)))
         }
     }
 }
+
+
+
+
+//func scrollViewDidScroll(scrollView: UIScrollView) {
+//    
+//    let yRightTableViewOffset = rightTableView.contentOffset.y
+//    
+//    // Right table view
+//    let newYRightTableViewOffsetDown = yRightTableViewOffset + 3
+//    let newRightTableViewOffsetDown = CGPointMake(0, newYRightTableViewOffsetDown)
+//    
+//    let newYRightTableViewOffsetUp = yRightTableViewOffset - 3
+//    let newRightTableViewOffsetUp = CGPointMake(0, newYRightTableViewOffsetUp)
+//    
+//    if scrollView == leftTableView {
+//        if lastContentOffset < scrollView.contentOffset.y {
+//            rightTableView.setContentOffset(newRightTableViewOffsetDown, animated: false)
+//        } else if lastContentOffset > scrollView.contentOffset.y {
+//            rightTableView.setContentOffset(newRightTableViewOffsetUp, animated: false)
+//        }
+//        self.lastContentOffset = scrollView.contentOffset.y
+//    }
+//}
